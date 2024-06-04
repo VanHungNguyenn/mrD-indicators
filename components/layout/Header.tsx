@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import Nav from './Nav'
+import { buttonVariants } from '@/components/ui/button'
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -53,16 +54,15 @@ const Header = () => {
 				</div>
 				<div
 					id='myNav'
-					className={`relative flex items-center gap-20 lg:flex-col lg:p-20 lg:fixed ${
-						isOpen ? 'lg:right-0' : 'lg:right-[-100%]'
-					} lg:top-0 lg:bottom-0 lg:max-w-[300px] lg:w-full lg:bg-primary shadow-xl`}
+					className={`relative flex items-center gap-20 lg:flex-col lg:p-20 lg:fixed ${isOpen ? 'lg:right-0' : 'lg:right-[-100%]'
+						} lg:top-0 lg:bottom-0 lg:max-w-[300px] lg:w-full lg:bg-primary shadow-xl`}
 				>
 					<FaTimes
 						onClick={() => setIsOpen(false)}
 						className='hidden text-white text-3xl cursor-pointer lg:absolute lg:right-5 lg:top-5 lg:z-50 lg:flex'
 					/>
 					<Nav />
-					{/* <div className='flex items-center gap-2'>
+					<div className='flex items-center gap-2'>
 						<Link
 							className={buttonVariants({ variant: 'outline' })}
 							href='/login'
@@ -75,7 +75,7 @@ const Header = () => {
 						>
 							Sign Up
 						</Link>
-					</div> */}
+					</div>
 				</div>
 			</div>
 		</header>

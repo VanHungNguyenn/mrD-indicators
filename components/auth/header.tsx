@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const Header = ({ label }: HeaderProps) => {
 	return (
-		<div className='w-full flex flex-col gap-y-6 items-center justify-center'>
+		<div className='w-full flex flex-col gap-y-4 items-center justify-center'>
 			<div className='flex items-center justify-center'>
 				<Image
 					src='/logo.svg'
@@ -16,7 +16,7 @@ const Header = ({ label }: HeaderProps) => {
 					height={0}
 					sizes='100vw'
 					priority={true}
-					className='object-cover w-[200px] h-auto'
+					className='object-cover w-[100px] h-auto'
 				/>
 			</div>
 			<p className='text-white text-xl text-center'>{label}</p>

@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import Header from '@/components/auth/header'
-import Social from '@/components/auth/social'
+// import Social from '@/components/auth/social'
 import BackButton from './back-button'
 
 interface CardWrapperProps {
@@ -27,7 +27,7 @@ const CardWrapper = ({
 			</CardHeader>
 			<CardContent>
 				{children}
-				<div className='relative mt-8'>
+				{/* <div className='relative mt-8'>
 					<div className='absolute inset-0 flex items-center'>
 						<span className='w-full border-t' />
 					</div>
@@ -36,14 +36,14 @@ const CardWrapper = ({
 							Or continue with
 						</span>
 					</div>
-				</div>
+				</div> */}
 			</CardContent>
 
-			{showSocial && (
+			{/* {showSocial && (
 				<CardFooter>
 					<Social />
 				</CardFooter>
-			)}
+			)} */}
 			<CardFooter>
 				<BackButton label={backButtonLabel} href={backButtonHref} />
 			</CardFooter>

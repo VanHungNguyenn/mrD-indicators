@@ -38,7 +38,7 @@ const LoginForm = () => {
 		setError('')
 		setSuccess('')
 
-		startTransition(() => {})
+		startTransition(() => { })
 	}
 
 	return (
@@ -103,15 +103,15 @@ const LoginForm = () => {
 					>
 						Login
 					</Button>
-					<Button
-						variant={'link'}
-						className='font-normal text-white w-full'
-						size={'sm'}
-						asChild
-					>
-						<Link href='forgot-password'>Forgot password?</Link>
-					</Button>
 				</form>
+				<Button
+					variant={'link'}
+					className='font-normal text-white w-full mt-0'
+					size={'sm'}
+					asChild
+				>
+					<Link href='forgot-password'>Forgot password?</Link>
+				</Button>
 			</Form>
 		</CardWrapper>
 	)
